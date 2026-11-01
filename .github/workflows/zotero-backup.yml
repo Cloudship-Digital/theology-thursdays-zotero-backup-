@@ -1,14 +1,14 @@
-# Weekly, append-only backup of your Zotero library into THIS repository.
+# Daily, append-only backup of your Zotero library into THIS repository.
 # Lives in a separate private repo that Claude has no access to.
 # Secrets needed (repo Settings → Secrets and variables → Actions):
 #   ZOTERO_API_KEY   read-only key (library + notes access)
 #   ZOTERO_USER_ID   your numeric userID
 #   ZOTERO_GROUP_ID  optional: the "PhD Reading (Claude)" group id, to back up that group too
-name: Weekly Zotero backup
+name: Daily Zotero backup
 
 on:
   schedule:
-    - cron: "17 6 * * 1"   # every Monday 06:17 UTC
+    - cron: "17 6 * * *"   # every day 06:17 UTC
   workflow_dispatch: {}    # plus a "Run workflow" button for on-demand backups
 
 permissions:
@@ -50,8 +50,11 @@ jobs:
                   if not page or len(out) >= total:
                       return out
 
-          day = datetime.date.today().isoformat()
+          now = datetime.datetime.now(datetime.timezone.utc)
+          day = now.date().isoformat()
           root = pathlib.Path("backups") / day
+          if root.exists():  # never overwrite an earlier backup from the same day
+              root = pathlib.Path("backups") / now.strftime("%Y-%m-%d_%H%M")
           summary = [f"# Zotero backup {day}\n"]
           for kind, lib_id, name in libs:
               base = f"https://api.zotero.org/{kind}/{lib_id}"
@@ -71,6 +74,18 @@ jobs:
               summary += [f"- {t}: {n}" for t, n in sorted(types.items())]
           (root / "SUMMARY.md").write_text("\n".join(summary) + "\n")
           print("\n".join(summary))
+
+          # If nothing changed since the previous backup, discard this one (keeps the repo small).
+          import hashlib, shutil
+          def digest(folder):
+              h = hashlib.sha256()
+              for f in sorted(folder.rglob("*.json")):
+                  h.update(f.relative_to(folder).as_posix().encode()); h.update(f.read_bytes())
+              return h.hexdigest()
+          older = sorted(p for p in pathlib.Path("backups").iterdir() if p.is_dir() and p != root)
+          if older and digest(older[-1]) == digest(root):
+              shutil.rmtree(root)   # only removes the NEW, unsaved folder from this run
+              print("No changes since", older[-1].name, "- nothing to save today.")
           PY
 
       - name: Commit the new snapshot (append-only)
