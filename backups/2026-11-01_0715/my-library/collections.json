@@ -1,0 +1,547 @@
+[
+ {
+  "key": "TPZ24NC9",
+  "version": 246,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/TPZ24NC9",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/TPZ24NC9",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/NE68QNQZ",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 0
+  },
+  "data": {
+   "key": "TPZ24NC9",
+   "version": 246,
+   "name": "Amos Yong",
+   "parentCollection": "NE68QNQZ",
+   "relations": {}
+  }
+ },
+ {
+  "key": "5E9URGAN",
+  "version": 245,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/5E9URGAN",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/5E9URGAN",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/NE68QNQZ",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 0
+  },
+  "data": {
+   "key": "5E9URGAN",
+   "version": 245,
+   "name": "Wolfgang Vondey",
+   "parentCollection": "NE68QNQZ",
+   "relations": {}
+  }
+ },
+ {
+  "key": "NE68QNQZ",
+  "version": 244,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/NE68QNQZ",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/NE68QNQZ",
+    "type": "text/html"
+   }
+  },
+  "meta": {
+   "numCollections": 2,
+   "numItems": 0
+  },
+  "data": {
+   "key": "NE68QNQZ",
+   "version": 244,
+   "name": "PhD 24",
+   "parentCollection": false,
+   "relations": {}
+  }
+ },
+ {
+  "key": "RITVD6U6",
+  "version": 204,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/RITVD6U6",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/RITVD6U6",
+    "type": "text/html"
+   }
+  },
+  "meta": {
+   "numCollections": 6,
+   "numItems": 0
+  },
+  "data": {
+   "key": "RITVD6U6",
+   "version": 204,
+   "name": "Masters Research",
+   "parentCollection": false,
+   "relations": {}
+  }
+ },
+ {
+  "key": "N6752PPU",
+  "version": 203,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/N6752PPU",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/N6752PPU",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/BIH2JNNB",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 0
+  },
+  "data": {
+   "key": "N6752PPU",
+   "version": 203,
+   "name": "Masters Research",
+   "parentCollection": "BIH2JNNB",
+   "relations": {},
+   "deleted": true
+  }
+ },
+ {
+  "key": "BIH2JNNB",
+  "version": 201,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/BIH2JNNB",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/BIH2JNNB",
+    "type": "text/html"
+   }
+  },
+  "meta": {
+   "numCollections": 1,
+   "numItems": 0
+  },
+  "data": {
+   "key": "BIH2JNNB",
+   "version": 201,
+   "name": "Future Research",
+   "parentCollection": false,
+   "relations": {}
+  }
+ },
+ {
+  "key": "KF5PPF2P",
+  "version": 200,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/KF5PPF2P",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/KF5PPF2P",
+    "type": "text/html"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 1
+  },
+  "data": {
+   "key": "KF5PPF2P",
+   "version": 200,
+   "name": "PhD Proposal",
+   "parentCollection": false,
+   "relations": {}
+  }
+ },
+ {
+  "key": "NZKZSE5X",
+  "version": 205,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/NZKZSE5X",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/NZKZSE5X",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/RITVD6U6",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 39
+  },
+  "data": {
+   "key": "NZKZSE5X",
+   "version": 205,
+   "name": "True Self, False Self",
+   "parentCollection": "RITVD6U6",
+   "relations": {}
+  }
+ },
+ {
+  "key": "CGA4BJDX",
+  "version": 206,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/CGA4BJDX",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/CGA4BJDX",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/RITVD6U6",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 20
+  },
+  "data": {
+   "key": "CGA4BJDX",
+   "version": 206,
+   "name": "Spirit-Christology",
+   "parentCollection": "RITVD6U6",
+   "relations": {}
+  }
+ },
+ {
+  "key": "CTV8DFSL",
+  "version": 207,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/CTV8DFSL",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/CTV8DFSL",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/RITVD6U6",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 3
+  },
+  "data": {
+   "key": "CTV8DFSL",
+   "version": 207,
+   "name": "Historical Jesus/Early Christianity",
+   "parentCollection": "RITVD6U6",
+   "relations": {}
+  }
+ },
+ {
+  "key": "Y9N9XZY6",
+  "version": 210,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/Y9N9XZY6",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/Y9N9XZY6",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/RITVD6U6",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 22
+  },
+  "data": {
+   "key": "Y9N9XZY6",
+   "version": 210,
+   "name": "Holy Spirit in Calvin",
+   "parentCollection": "RITVD6U6",
+   "relations": {}
+  }
+ },
+ {
+  "key": "DH2P6QWN",
+  "version": 209,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/DH2P6QWN",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/DH2P6QWN",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/RITVD6U6",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 1,
+   "numItems": 24
+  },
+  "data": {
+   "key": "DH2P6QWN",
+   "version": 209,
+   "name": "Trinitarian Community",
+   "parentCollection": "RITVD6U6",
+   "relations": {}
+  }
+ },
+ {
+  "key": "IYS5WP36",
+  "version": 208,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/IYS5WP36",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/IYS5WP36",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/RITVD6U6",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 9
+  },
+  "data": {
+   "key": "IYS5WP36",
+   "version": 208,
+   "name": "Bonaventure",
+   "parentCollection": "RITVD6U6",
+   "relations": {}
+  }
+ },
+ {
+  "key": "V3QDGVX2",
+  "version": 2,
+  "library": {
+   "type": "user",
+   "id": 4843433,
+   "name": "joshjmitchell1",
+   "links": {
+    "alternate": {
+     "href": "https://www.zotero.org/joshjmitchell1",
+     "type": "text/html"
+    }
+   }
+  },
+  "links": {
+   "self": {
+    "href": "https://api.zotero.org/users/4843433/collections/V3QDGVX2",
+    "type": "application/json"
+   },
+   "alternate": {
+    "href": "https://www.zotero.org/joshjmitchell1/collections/V3QDGVX2",
+    "type": "text/html"
+   },
+   "up": {
+    "href": "https://api.zotero.org/users/4843433/collections/DH2P6QWN",
+    "type": "application/json"
+   }
+  },
+  "meta": {
+   "numCollections": 0,
+   "numItems": 25
+  },
+  "data": {
+   "key": "V3QDGVX2",
+   "version": 2,
+   "name": "Zizioulas",
+   "parentCollection": "DH2P6QWN",
+   "relations": {}
+  }
+ }
+]
