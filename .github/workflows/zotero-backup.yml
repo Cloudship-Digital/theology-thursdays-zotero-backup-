@@ -1,0 +1,83 @@
+# Weekly, append-only backup of your Zotero library into THIS repository.
+# Lives in a separate private repo that Claude has no access to.
+# Secrets needed (repo Settings → Secrets and variables → Actions):
+#   ZOTERO_API_KEY   read-only key (library + notes access)
+#   ZOTERO_USER_ID   your numeric userID
+#   ZOTERO_GROUP_ID  optional: the "PhD Reading (Claude)" group id, to back up that group too
+name: Weekly Zotero backup
+
+on:
+  schedule:
+    - cron: "17 6 * * 1"   # every Monday 06:17 UTC
+  workflow_dispatch: {}    # plus a "Run workflow" button for on-demand backups
+
+permissions:
+  contents: write
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download library from Zotero
+        env:
+          ZOTERO_API_KEY: ${{ secrets.ZOTERO_API_KEY }}
+          ZOTERO_USER_ID: ${{ secrets.ZOTERO_USER_ID }}
+          ZOTERO_GROUP_ID: ${{ secrets.ZOTERO_GROUP_ID }}
+        run: |
+          python3 - <<'PY'
+          import json, os, pathlib, urllib.request, datetime
+
+          key = os.environ["ZOTERO_API_KEY"]
+          libs = [("users", os.environ["ZOTERO_USER_ID"], "my-library")]
+          if os.environ.get("ZOTERO_GROUP_ID"):
+              libs.append(("groups", os.environ["ZOTERO_GROUP_ID"], "group"))
+
+          def fetch(url):
+              req = urllib.request.Request(url, headers={"Zotero-API-Key": key, "Zotero-API-Version": "3"})
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  return r.read(), int(r.headers.get("Total-Results") or 0)
+
+          def all_json(base, path):
+              out, start = [], 0
+              while True:
+                  sep = "&" if "?" in path else "?"
+                  body, total = fetch(f"{base}/{path}{sep}format=json&limit=100&start={start}")
+                  page = json.loads(body)
+                  out += page
+                  start += 100
+                  if not page or len(out) >= total:
+                      return out
+
+          day = datetime.date.today().isoformat()
+          root = pathlib.Path("backups") / day
+          summary = [f"# Zotero backup {day}\n"]
+          for kind, lib_id, name in libs:
+              base = f"https://api.zotero.org/{kind}/{lib_id}"
+              d = root / name
+              d.mkdir(parents=True, exist_ok=True)
+              items = all_json(base, "items")          # every item: records, attachments, notes, annotations
+              collections = all_json(base, "collections")
+              (d / "items.json").write_text(json.dumps(items, indent=1, ensure_ascii=False))
+              (d / "collections.json").write_text(json.dumps(collections, indent=1, ensure_ascii=False))
+              bib, _ = fetch(f"{base}/items/top?format=biblatex&limit=100")  # first 100 records, BibLaTeX
+              (d / "references-sample.bib").write_bytes(bib)
+              types = {}
+              for it in items:
+                  t = it["data"].get("itemType", "?")
+                  types[t] = types.get(t, 0) + 1
+              summary.append(f"## {name}\n- {len(items)} objects, {len(collections)} collections")
+              summary += [f"- {t}: {n}" for t, n in sorted(types.items())]
+          (root / "SUMMARY.md").write_text("\n".join(summary) + "\n")
+          print("\n".join(summary))
+          PY
+
+      - name: Commit the new snapshot (append-only)
+        run: |
+          git config user.name "zotero-backup-bot"
+          git config user.email "zotero-backup-bot@users.noreply.github.com"
+          git add backups
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "Zotero backup $(date -u +%F)"
+          git push
